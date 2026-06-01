@@ -34,4 +34,47 @@ Create a Date table with columns for Date, Year and Month, as well as calculated
 
 <img width="1316" height="739" alt="image" src="https://github.com/user-attachments/assets/f8ee314c-af75-4dd0-8da1-5e91efbbfb57" />
 
+## T-SQL Script & DAX formulas
 
+<details>
+<summary><b>Click to expand: Optimised T-SQL View Script</summary> 
+  
+```sql
+CREATE VIEW 'Product Sales' AS
+SELECT
+Production.Product.Name AS 'Product Name',
+Production.ProductCategory.Name AS 'Category',
+Production.ProductSubcategory.Name AS 'Subcategory',
+ROUND(Production.Product.StandardCost,2) AS 'Cost',
+Sales.SalesOrderDetail.OrderQty AS 'Quantity',
+ROUND(Sales.SalesOrderDetail.LineTotal,2) AS 'Product Revenue',
+ROUND(Sales.SalesOrderDetail.LineTotal - Production.Product.StandardCost * Sales.SalesOrderDetail.OrderQty, 2) AS 'Product Profit',
+CAST(Sales.SalesOrderHeader.OrderDate AS DATE) AS 'Order Date',
+Sales.SalesOrderHeader.TerritoryID
+FROM Sales.SalesOrderDetail
+INNER JOIN Production.Product ON Sales.SalesOrderDetail.ProductID = Production.Product.ProductID
+INNER JOIN Production.ProductSubcategory ON Production.Product.ProductSubcategoryID = Production.ProductSubcategory.ProductSubcategoryID
+INNER JOIN Production.ProductCategory ON Production.ProductCategory.ProductCategoryID = Production.ProductSubcategory.ProductCategoryID
+INNER JOIN Sales.SalesOrderHeader ON Sales.SalesOrderHeader.SalesOrderID = Sales.SalesOrderDetail.SalesOrderID
+```
+
+</details>
+
+<details>
+<summary><b>Click to expand: DAX formulas</summary> 
+
+```dax
+Fiscal Year = IF('Date'[Month]>=6, "FY" & 'Date'[Year] +1, "FY" & 'Date'[Year])
+
+Fiscal Quarter = SWITCH('Date'[Month], 6, "FQ1", 7, "FQ1", 8, "FQ1", 9, "FQ2", 10, "FQ2", 11, "FQ2", 12, "FQ3", 1, "FQ3", 2, "FQ3", 3, "FQ4", 4, "FQ4", 5, "FQ4")
+
+Total Profit = SUM('Product Sales'[Product Profit])
+
+Total Revenue = SUM('Product Sales'[Product Revenue])
+
+AVERAGEX(SUMMARIZE('Product Sales', 'Date’[Year], 'Date’[Month]), [Total Profit])
+
+AVERAGEX(SUMMARIZE('Product Sales', 'Date’[Year], 'Date’[Month]), [Total Revenue])
+```
+
+</details>
