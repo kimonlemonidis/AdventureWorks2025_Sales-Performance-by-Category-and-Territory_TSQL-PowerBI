@@ -72,9 +72,9 @@ Total Profit = SUM('Product Sales'[Product Profit])
 
 Total Revenue = SUM('Product Sales'[Product Revenue])
 
-AVERAGEX(SUMMARIZE('Product Sales', 'Date’[Year], 'Date’[Month]), [Total Profit])
+Average Monthly Profit = AVERAGEX(SUMMARIZE('Product Sales', 'Date’[Year], 'Date’[Month]), [Total Profit])
 
-AVERAGEX(SUMMARIZE('Product Sales', 'Date’[Year], 'Date’[Month]), [Total Revenue])
+Average Monthly Revenue = AVERAGEX(SUMMARIZE('Product Sales', 'Date’[Year], 'Date’[Month]), [Total Revenue])
 ```
 
 </details>
