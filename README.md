@@ -40,7 +40,7 @@ Create a Date table with columns for Date, Year and Month, as well as calculated
 <summary><b>Click to expand: Optimised T-SQL View Script</summary> 
   
 ```sql
-CREATE VIEW 'Product Sales' AS
+CREATE VIEW Product_Sales AS
 SELECT
 Production.Product.Name AS 'Product Name',
 Production.ProductCategory.Name AS 'Category',
