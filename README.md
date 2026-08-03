@@ -1,4 +1,4 @@
-# AdventureWorks2025_Sales-Performance-by-Category-and-Territory_TSQL-PowerBI
+# AdventureWorks2025: Sales Performance by Category and Territory (TSQL-PowerBI)
 Identify Product Categories that drive growth and Territories that are lagging behind in profit margins. Explain why this may be happening.
 
 
@@ -22,9 +22,9 @@ Create a Date table with columns for Date, Year and Month, as well as calculated
 
 
 ## Key Findings: Power BI
-  1. While Bikes are the ones that generate the highest revenue and profit, Asccessories are the one that have the highest Profit Margin, with significantly increased sales over the last recorded year.
-  2. Australia is the territory displaying the highest profit, largely due to  high sales of Bikes.
-  3. Underperforming territories, like US Northeast, Southeast and Central, tend to sell large amounts (>3,000 units) of Road Bikes at a loss.
+  1. While Bikes are the ones that generate the highest revenue and profit, Accessories are the one that have the highest Profit Margin, with significantly increased sales over the last recorded year.
+  2. Australia is the Territory displaying the highest profit, largely due to  high sales of Bikes.
+  3. Underperforming Territories, like US Northeast, Southeast and Central, tend to sell high number (>3,000 units) of Road Bikes at a loss.
 
 
 
