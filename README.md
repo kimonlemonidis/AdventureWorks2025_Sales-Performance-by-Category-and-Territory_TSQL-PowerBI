@@ -48,7 +48,7 @@ A business intelligence project analyzing regional profitability and product per
 ## T-SQL Script & DAX formulas
 
 <details>
-<summary><b>Click to expand: Optimised T-SQL View Script></summary> 
+<summary><b>Click to expand: Optimised T-SQL View Script</summary> 
   
 ```sql
 CREATE VIEW Product_Sales AS
@@ -72,7 +72,7 @@ INNER JOIN Sales.SalesOrderHeader ON Sales.SalesOrderHeader.SalesOrderID = Sales
 </details>
 
 <details>
-<summary><b>Click to expand: DAX formulas></summary> 
+<summary><b>Click to expand: DAX formulas</summary> 
 
 ```dax
 Fiscal Year = IF('Date'[Month]>=6, "FY" & 'Date'[Year] +1, "FY" & 'Date'[Year])
