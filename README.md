@@ -1,12 +1,10 @@
-# AdventureWorks2025: Sales Performance by Category and Territory (TSQL-PowerBI)
-Identify Product Categories that drive growth and Territories that are lagging behind in profit margins. Explain why this may be happening.
-
-
+# AdventureWorks2025: Sales Performance by Category and Territory (TSQL & PowerBI)
+A business intelligence project analyzing regional profitability and product performance for AdventureWorks. By establishing upstream T-SQL data transformations and dynamic DAX modeling, these dashboards reveal why certain high-volume territories underperform and identify key margin drivers across categories.
 
 ## Data Preparation: Microsoft SQL Server (T-SQL)
 - Create a VIEW (**Product Sales**) table, by joining DIMENSION tables *Production.Product, Production.ProductCategory, Production.ProductSubcategory* and *Sales.SalesOrderHeader* with FACT table *Sales.SalesOrderDetail*. This is for performance optimisation, so that only the data required are imported into Power BI. The VIEW table is created in a way so that a column with calculated Profit is included in that table.
 - Import into Power BI.
-- Import *Sales.SalesTerritory* as a standalone dimension table (renamed to **Sales Territory**)into Power BI. 
+- Import *Sales.SalesTerritory* as a standalone dimension table (renamed to **Sales Territory**) into Power BI. 
 
 
 
