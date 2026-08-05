@@ -23,17 +23,12 @@ Identify Product Categories that drive growth and Territories that are lagging b
 
 
 <img width="824" height="461" alt="image" src="https://github.com/user-attachments/assets/91c539f0-6473-4668-ba67-8b029aab7cb5" />
-*Star Schema*
-
 
 
 <img width="1337" height="749" alt="image" src="https://github.com/user-attachments/assets/9c4ad553-d221-4e83-99f1-0baae01e16c4" />
-*Page 1: Filtering by Category*
-
 
 
 <img width="1316" height="742" alt="image" src="https://github.com/user-attachments/assets/16c554c4-d531-4b3f-87d0-6345fa4d8cf9" />
-*Page 2: Filtering by Territory*
 
 
 
@@ -46,18 +41,10 @@ Identify Product Categories that drive growth and Territories that are lagging b
 
 
 <img width="1334" height="752" alt="image" src="https://github.com/user-attachments/assets/14662111-a842-4fdc-b8a5-3f6bfd6d2146" />
-*Page 1: Filtering by Category: Accesories*
-
-
 
 <img width="1314" height="738" alt="image" src="https://github.com/user-attachments/assets/0f895460-5949-4c7f-8e31-a742d8ee323b" />
-*Page 2: Filtering by Territory: Australia*
-
-
 
 <img width="1316" height="739" alt="image" src="https://github.com/user-attachments/assets/f8ee314c-af75-4dd0-8da1-5e91efbbfb57" />
-*Page 2: Filtering by Territory: US Northeast*
-
 
 
 ## T-SQL Script & DAX formulas
